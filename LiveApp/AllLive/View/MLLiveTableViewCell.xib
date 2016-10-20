@@ -12,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="384" height="400"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="384" height="400"/>
+                <frame key="frameInset" width="384" height="399"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qmc-zw-6E9"/>
@@ -24,7 +24,7 @@
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="直播名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1j5-ba-FrB">
                         <constraints>
-                            <constraint firstAttribute="width" constant="59" id="7rh-3j-c4D"/>
+                            <constraint firstAttribute="width" constant="100" id="7rh-3j-c4D"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -52,22 +52,22 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVK-BM-t8h">
-                        <constraints>
-                            <constraint firstAttribute="width" constant="50" id="eoK-p7-qoh"/>
-                            <constraint firstAttribute="height" constant="21" id="yRL-6Y-fsc"/>
-                        </constraints>
-                    </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEa-x2-0B8">
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="3ae-cU-1SD"/>
-                            <constraint firstAttribute="width" constant="54" id="jEd-ex-Zjs"/>
+                            <constraint firstAttribute="width" constant="70" id="jEd-ex-Zjs"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <state key="normal" title="定位">
                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IVK-BM-t8h">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="eoK-p7-qoh"/>
+                            <constraint firstAttribute="height" constant="21" id="yRL-6Y-fsc"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="1j5-ba-FrB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="41U-ah-9cw"/>

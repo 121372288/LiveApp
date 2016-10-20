@@ -23,20 +23,20 @@
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    self.hotView.frame = CGRectMake(0, 64, MLScreenWidth, self.frame.size.height);
-    self.nestView.frame = CGRectMake(MLScreenWidth, 64, MLScreenWidth, self.frame.size.height);
+//    self.hotView.frame = CGRectMake(0, 64, MLScreenWidth, self.frame.size.height);
+//    self.nestView.frame = CGRectMake(MLScreenWidth, 64, MLScreenWidth, self.frame.size.height);
 }
 
 -(MLHotView *)hotView{
     if (_hotView == nil) {
-        _hotView =[[MLHotView alloc] initWithFrame:CGRectMake(0, 64, MLScreenWidth, self.frame.size.height)];
+        _hotView =[[MLHotView alloc] initWithFrame:CGRectMake(0, 64, self.frame.size.width, self.frame.size.height - 113)];
     }
     return _hotView;
 }
 
 -(MLNewView *)nestView{
     if (_nestView == nil) {
-        _nestView =[[MLNewView alloc] initWithFrame:CGRectMake(MLScreenWidth, 64, MLScreenWidth, self.frame.size.height)];
+        _nestView =[[MLNewView alloc] initWithFrame:CGRectMake(self.frame.size.width, 64, self.frame.size.width, self.frame.size.height - 113)];
     }
     return _nestView;
 }

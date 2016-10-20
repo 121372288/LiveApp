@@ -17,6 +17,7 @@
 /* 控制展示和隐藏头部底部item */
 - (void)hiddenNCAndTC;
 - (void)appearNCAndTC;
+- (BOOL)isNCAndTCHidden;
 
 /* 控制变化视图-ptrsent */
 - (void)presentToNextViewControllerWithIdentifying:(MLLiveScrollViewType)Identifying VCInfoArray:(NSMutableArray *)VCInfoArray clickNumber:(NSInteger)number;

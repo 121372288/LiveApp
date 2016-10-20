@@ -43,11 +43,9 @@
 
 
 @property (nonatomic, strong) NSString *nickname;
-@property (nonatomic, strong) NSString *position;
-@property (nonatomic, strong) NSString *photo;
-//@property (nonatomic, strong) NSString *flv;
-//@property (nonatomic, assign) NSInteger useridx;
-//@property (nonatomic, assign) NSInteger allnum;
 
+@property (nonatomic, strong) NSString *position;
+
+@property (nonatomic, strong) NSString *photo;
 
 @end

@@ -138,6 +138,9 @@
 		6D4263461DACC9FC00D42054 /* MLLiveCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4263451DACC9FC00D42054 /* MLLiveCellModel.m */; };
 		6D4263491DAD0E4C00D42054 /* MLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4263481DAD0E4C00D42054 /* MLNavigationController.m */; };
 		6D42634C1DAD148200D42054 /* MLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D42634B1DAD148200D42054 /* MLRequestManager.m */; };
+		6DAF86AB1DB8CDF600E075ED /* MLNewViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF86A91DB8CDF600E075ED /* MLNewViewCell.m */; };
+		6DAF86AC1DB8CDF600E075ED /* MLNewViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DAF86AA1DB8CDF600E075ED /* MLNewViewCell.xib */; };
+		6DAF86AF1DB8E31300E075ED /* MLHeartFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF86AE1DB8E31300E075ED /* MLHeartFlyView.m */; };
 		6DB0D84D1DB77D1200FFE072 /* UIImageView+MLExtensionLoadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB0D84C1DB77D1200FFE072 /* UIImageView+MLExtensionLoadImage.m */; };
 		6DB0D8501DB78FBA00FFE072 /* MLPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DB0D84F1DB78FBA00FFE072 /* MLPlayerView.m */; };
 		6DCEDB6C1DB8640E0080B084 /* MLOperationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCEDB6B1DB8640E0080B084 /* MLOperationView.m */; };
@@ -342,6 +345,11 @@
 		6D4263481DAD0E4C00D42054 /* MLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLNavigationController.m; path = LiveApp/Main/Controllers/MLNavigationController.m; sourceTree = SOURCE_ROOT; };
 		6D42634A1DAD148200D42054 /* MLRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLRequestManager.h; path = LiveApp/Main/Tools/MLRequestManager.h; sourceTree = SOURCE_ROOT; };
 		6D42634B1DAD148200D42054 /* MLRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLRequestManager.m; path = LiveApp/Main/Tools/MLRequestManager.m; sourceTree = SOURCE_ROOT; };
+		6DAF86A81DB8CDF600E075ED /* MLNewViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLNewViewCell.h; path = LiveApp/AllLive/View/MLNewViewCell.h; sourceTree = SOURCE_ROOT; };
+		6DAF86A91DB8CDF600E075ED /* MLNewViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLNewViewCell.m; path = LiveApp/AllLive/View/MLNewViewCell.m; sourceTree = SOURCE_ROOT; };
+		6DAF86AA1DB8CDF600E075ED /* MLNewViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MLNewViewCell.xib; path = LiveApp/AllLive/View/MLNewViewCell.xib; sourceTree = SOURCE_ROOT; };
+		6DAF86AD1DB8E31300E075ED /* MLHeartFlyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLHeartFlyView.h; path = LiveApp/Main/Tools/MLHeartFlyView.h; sourceTree = SOURCE_ROOT; };
+		6DAF86AE1DB8E31300E075ED /* MLHeartFlyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLHeartFlyView.m; path = LiveApp/Main/Tools/MLHeartFlyView.m; sourceTree = SOURCE_ROOT; };
 		6DB0D84B1DB77D1200FFE072 /* UIImageView+MLExtensionLoadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImageView+MLExtensionLoadImage.h"; path = "LiveApp/Main/Tools/UIImageView+MLExtensionLoadImage.h"; sourceTree = SOURCE_ROOT; };
 		6DB0D84C1DB77D1200FFE072 /* UIImageView+MLExtensionLoadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+MLExtensionLoadImage.m"; path = "LiveApp/Main/Tools/UIImageView+MLExtensionLoadImage.m"; sourceTree = SOURCE_ROOT; };
 		6DB0D84E1DB78FBA00FFE072 /* MLPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLPlayerView.h; sourceTree = "<group>"; };
@@ -819,6 +827,8 @@
 				6DE0415D1DAE55D9002661C1 /* MLFadeAlertView.m */,
 				6DB0D84B1DB77D1200FFE072 /* UIImageView+MLExtensionLoadImage.h */,
 				6DB0D84C1DB77D1200FFE072 /* UIImageView+MLExtensionLoadImage.m */,
+				6DAF86AD1DB8E31300E075ED /* MLHeartFlyView.h */,
+				6DAF86AE1DB8E31300E075ED /* MLHeartFlyView.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -902,6 +912,9 @@
 				6D42633A1DACA45400D42054 /* MLHotView.m */,
 				6D42633C1DACA47C00D42054 /* MLNewView.h */,
 				6D42633D1DACA47C00D42054 /* MLNewView.m */,
+				6DAF86A81DB8CDF600E075ED /* MLNewViewCell.h */,
+				6DAF86A91DB8CDF600E075ED /* MLNewViewCell.m */,
+				6DAF86AA1DB8CDF600E075ED /* MLNewViewCell.xib */,
 				6D42633F1DACA8E000D42054 /* MLLiveTableViewCell.h */,
 				6D4263401DACA8E000D42054 /* MLLiveTableViewCell.m */,
 				6D4263411DACA8E000D42054 /* MLLiveTableViewCell.xib */,
@@ -1076,6 +1089,7 @@
 				TargetAttributes = {
 					6DD0C8D01DAB438A00B06574 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = C8TM74AHWM;
 						ProvisioningStyle = Automatic;
 					};
 					6DD0C8E91DAB438A00B06574 = {
@@ -1174,6 +1188,7 @@
 				6D03C78C1DB0F3E8007C882D /* diamond-22.png in Resources */,
 				6D03C75C1DB0F3E8007C882D /* yd2.png in Resources */,
 				6D03C78A1DB0F3E8007C882D /* diamond-20.png in Resources */,
+				6DAF86AC1DB8CDF600E075ED /* MLNewViewCell.xib in Resources */,
 				6D03C75A1DB0F3E8007C882D /* qdwz.png in Resources */,
 				6D03C77D1DB0F3E8007C882D /* 1314-7.png in Resources */,
 				6D03C7591DB0F3E8007C882D /* open.jpg in Resources */,
@@ -1332,11 +1347,13 @@
 				6DE041551DAE2AC5002661C1 /* MLLoginAndRedisterController.m in Sources */,
 				6DE0410D1DADEB52002661C1 /* MLLiveScrollView.m in Sources */,
 				6D4263461DACC9FC00D42054 /* MLLiveCellModel.m in Sources */,
+				6DAF86AB1DB8CDF600E075ED /* MLNewViewCell.m in Sources */,
 				6DE041141DAE1FAA002661C1 /* MLPlayerViewController.m in Sources */,
 				6DD0C8D91DAB438A00B06574 /* MLAppDelegate.m in Sources */,
 				6D42633B1DACA45400D42054 /* MLHotView.m in Sources */,
 				6D1A5CA51DAB8D2200D4ADC5 /* MLMainViewController.m in Sources */,
 				6DD0C8D61DAB438A00B06574 /* main.m in Sources */,
+				6DAF86AF1DB8E31300E075ED /* MLHeartFlyView.m in Sources */,
 				6DD0C91D1DAB46A900B06574 /* MLProfileController.m in Sources */,
 				6DD0C91A1DAB468E00B06574 /* MLAllLiveController.m in Sources */,
 				6DE041521DAE27D0002661C1 /* MLUserModel.m in Sources */,
@@ -1489,6 +1506,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3F36476943F64F4C17022867 /* Pods-LiveAPP.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C8TM74AHWM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LiveApp/Other/IJKMediaFramework",
@@ -1509,6 +1527,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 071B541432D6CFE9FC93BF55 /* Pods-LiveAPP.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C8TM74AHWM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LiveApp/Other/IJKMediaFramework",

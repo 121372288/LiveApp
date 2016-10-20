@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2338c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MLNewViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="89" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="89" height="82"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dmo-1B-CAG"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vca-cj-Pui">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="nBr-lc-cHF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NUE-Yq-ZE3">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="2Pb-d7-XaR"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEW" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpQ-n3-s8W">
+                        <color key="backgroundColor" red="0.96329969167709351" green="0.060043461620807648" blue="0.61800473928451538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="86W-SM-0qm"/>
+                            <constraint firstAttribute="width" constant="31" id="XTz-mT-Dfk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="dmo-1B-CAG" secondAttribute="bottom" id="Cef-yB-G2e"/>
+                <constraint firstAttribute="trailing" secondItem="dmo-1B-CAG" secondAttribute="trailing" id="FuU-bQ-0BI"/>
+                <constraint firstItem="UpQ-n3-s8W" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="GI6-Nh-sRs"/>
+                <constraint firstItem="dmo-1B-CAG" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Kx7-tk-EWu"/>
+                <constraint firstItem="vca-cj-Pui" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Rq8-Dz-ruq"/>
+                <constraint firstItem="dmo-1B-CAG" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Vrp-46-PUF"/>
+                <constraint firstItem="NUE-Yq-ZE3" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Xjv-7p-of5"/>
+                <constraint firstItem="UpQ-n3-s8W" firstAttribute="leading" secondItem="vca-cj-Pui" secondAttribute="trailing" id="Yf5-pu-qAh"/>
+                <constraint firstItem="vca-cj-Pui" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="f0t-tx-lh9"/>
+                <constraint firstAttribute="trailing" secondItem="NUE-Yq-ZE3" secondAttribute="trailing" id="iV6-hS-lJ6"/>
+                <constraint firstAttribute="trailing" secondItem="UpQ-n3-s8W" secondAttribute="trailing" constant="8" id="sKQ-CS-p0B"/>
+                <constraint firstAttribute="bottom" secondItem="NUE-Yq-ZE3" secondAttribute="bottom" constant="5" id="xgv-hX-exJ"/>
+            </constraints>
+            <size key="customSize" width="89" height="82"/>
+            <connections>
+                <outlet property="liveAddress" destination="vca-cj-Pui" id="Tzn-MB-aXy"/>
+                <outlet property="liveImage" destination="dmo-1B-CAG" id="ekS-SD-a4T"/>
+                <outlet property="liveName" destination="NUE-Yq-ZE3" id="EjN-55-0RJ"/>
+            </connections>
+            <point key="canvasLocation" x="-134.5" y="-144"/>
+        </collectionViewCell>
+    </objects>
+</document>

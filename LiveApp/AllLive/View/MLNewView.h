@@ -11,3 +11,7 @@
 @interface MLNewView : UIView
 
 @end
+
+@interface MLNewView(Extension)<UICollectionViewDataSource, UICollectionViewDelegate>
+
+@end

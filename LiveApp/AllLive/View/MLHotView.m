@@ -48,28 +48,26 @@ static NSString *liveTableViewCell = @"LiveTableViewCell";
         
         [self requestDataPage:1];
         
-        
         self.tableView.mj_header =[MJRefreshGifHeader headerWithRefreshingBlock:^{
             self.tableView.tag =1;
             [self requestDataPage:1];
         }];
         
-        self.dataPage =1;
         self.tableView.mj_footer =[MJRefreshBackGifFooter footerWithRefreshingBlock:^{
-            self.tableView.tag =2;
             self.dataPage +=1;
             [self requestDataPage:self.dataPage];
         }];
-
+        [self.tableView.mj_header beginRefreshing];
     }
     return self;
 }
 
 - (void)requestDataPage:(NSInteger)page{
     [MLRequestManager requestDataWithUrl:LIVELISTURL(page) parametr:nil header:nil mehtod:MLRequestManagerMehtodGET compelet:^(NSData *data) {
-        if (self.tableView.tag ==1) {
+        if (page ==1) {
             [self.contentArray removeAllObjects];
         }
+        self.dataPage = page;
         NSDictionary *dic =[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
         if ([dic[@"code"]  isEqual:@"100"]) {
             for (NSDictionary *dict in dic[@"data"][@"list"]) {
@@ -113,24 +111,21 @@ static NSString *liveTableViewCell = @"LiveTableViewCell";
      MLAllLiveController *allLiveVC = [MLAllLiveController shareManager];
     [allLiveVC presentToNextViewControllerWithIdentifying:MLLiveScrollViewTypeHot VCInfoArray: self.contentArray clickNumber:indexPath.row];
     
-    // push
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    MLAllLiveController *allLiveVC = [MLAllLiveController shareManager];
     
     if (scrollView.isDragging) {
         if (scrollView.contentOffset.y>0 ) {
+            MLAllLiveController *allLiveVC = [MLAllLiveController shareManager];
             if (scrollView.contentOffset.y>self.recordY) {
-                [allLiveVC hiddenNCAndTC];
-                
+                    [allLiveVC hiddenNCAndTC];
             }else if(scrollView.contentOffset.y <self.recordY){
                 if (scrollView.contentOffset.y <  self.tableView.contentSize.height- MLScreenHeight  ) {
-                    [allLiveVC appearNCAndTC];
+                        [allLiveVC appearNCAndTC];
                 }
             }
             self.recordY =scrollView.contentOffset.y;
-            
         }
     }
 }

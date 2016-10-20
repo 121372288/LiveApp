@@ -57,12 +57,13 @@
     
     [self.player shutdown];
     [self.playView removeFromSuperview];
+    
     _player = [[IJKFFMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:self.model.flv] withOptions:nil];
     UIView *playerview = [self.player view];
     self.playView = [self.player view];
     playerview.frame = CGRectMake(0, 0, MLScreenWidth, MLScreenHeight);
     playerview.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    [self.player setScalingMode:IJKMPMovieScalingModeAspectFill];
+    [_player setScalingMode:IJKMPMovieScalingModeAspectFill];
     
     [self insertSubview:self.playView atIndex:0];
     // 操作视图隐藏
@@ -170,12 +171,8 @@
                 NSLog(@"IJKMPMoviePlayBackStateDidChange %d: playing", (int)_player.playbackState);
                 // 开始播放后添加操作
                 [self.operationView operationAppear];
-//                [self.loadingView loadingViewDisappear];
 //                [self.scrollView addSubview:self.liveInformationView];
-//                [self.scrollView insertSubview:self.chatBtn atIndex:3];
-//                [self.scrollView insertSubview:self.giftBtn atIndex:3];
-//                [self.scrollView insertSubview:self.shareBtn atIndex:3];
-    
+    // 加入聊天室
             }
                 break;
     
