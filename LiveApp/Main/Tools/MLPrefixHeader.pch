@@ -1,0 +1,54 @@
+//
+//  MLPrefixHeader.pch
+//  LiveAPP
+//
+//  Created by 马磊 on 2016/10/10.
+//  Copyright © 2016年 MLCode.com. All rights reserved.
+//
+
+#ifndef MLPrefixHeader_pch
+#define MLPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#define MLColor(r, g, b)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define MLScreenWidth [UIScreen mainScreen].bounds.size.width
+#define MLScreenHeight [UIScreen mainScreen].bounds.size.height
+#define kWidth      self.view.frame.size.width
+#define kHeight     self.view.frame.size.height
+
+#define HeaderViewanimateWithDuration 0.3
+
+#define MLTintColor MLColor(216, 41, 116)
+
+//请求
+#define LIVELISTURL(p) [NSString stringWithFormat:@"http://live.9158.com/Room/GetHotLive_v2?page=%ld",(p)]
+
+//#import <UIImageView+WebCache.h>
+#import "AFNetworking.h"
+#import <MJRefresh.h>
+#import "SVProgressHUD.h"
+#import "MLRequestManager.h"
+#import "MLUserModel.h"
+#import "MLLoginTools.h"
+#import "MLLoginAndRedisterController.h"
+#import "MLFadeAlertView.h"
+#import "UIImageView+MLExtensionLoadImage.h"
+/* 我的咪播 */
+#import <BmobSDK/Bmob.h>
+#import <RongIMLib/RongIMLib.h>
+
+/* 播放器 */
+#import "MLPlayerViewController.h"
+
+
+/* 获取照片相机权限 */
+#import <Photos/Photos.h>
+#import <AVFoundation/AVCaptureDevice.h>
+#import <AVFoundation/AVMediaFormat.h>
+
+
+#endif /* MLPrefixHeader_pch */

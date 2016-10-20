@@ -27,6 +27,18 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 
+# OS generated files # 
+###################### 
+.DS_Store* 
+ehthumbs.db 
+Icon? 
+Thumbs.db
+
+#ignore these files 
+Pods/*
+*.xcworkspace
+LiveApp/*.framework
+
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However
