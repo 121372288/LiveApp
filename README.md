@@ -2,7 +2,8 @@
 从零开始的直播App
 
 # 使用方式
-导入后 需要pods安装
+导入后 需要pods安装 
+'MJRefresh' 'Masonry' 'WMPageController' 'AFNetworking' 'SVProgressHUD' 'SDWebImage' 'BmobSDK' 'RongCloudIMLib' 'LFLiveKit' ,Podfile文件已创建，直接在工程根目录 pod install 即可
 还有导入 IJKMediaFramework.framework 才能正常使用
 
 # 功能介绍
