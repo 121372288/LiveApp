@@ -19,7 +19,15 @@ typedef void (^TransmissionError)(NSError *error);//传出error
 
 @interface MLRequestManager : NSObject
 
-+ (void)requestDataWithUrl:(NSString *)url parametr:(NSDictionary *)parameter header:(NSDictionary *)header mehtod:(MLRequestManagerMehtod)method compelet:(RequestDataCompeled)compele updateUI:(UpdateUI)update transmissionError:(TransmissionError)transmissionError;
+
+
++ (void)requestDataWithUrl:(NSString *)url
+                  parametr:(NSDictionary *)parameter
+                    header:(NSDictionary *)header
+                    mehtod:(MLRequestManagerMehtod)method
+                  compelet:(RequestDataCompeled)compele
+                  updateUI:(UpdateUI)update
+         transmissionError:(TransmissionError)transmissionError;
 
 
 @end

@@ -138,6 +138,11 @@
 		6D4263461DACC9FC00D42054 /* MLLiveCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4263451DACC9FC00D42054 /* MLLiveCellModel.m */; };
 		6D4263491DAD0E4C00D42054 /* MLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D4263481DAD0E4C00D42054 /* MLNavigationController.m */; };
 		6D42634C1DAD148200D42054 /* MLRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D42634B1DAD148200D42054 /* MLRequestManager.m */; };
+		6D6C95C71DBB3B1200DFBD54 /* CALayer+MLLoadingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C95C61DBB3B1200DFBD54 /* CALayer+MLLoadingLayer.m */; };
+		6D6C95CA1DBB3D8800DFBD54 /* MLShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C95C91DBB3D8800DFBD54 /* MLShareView.m */; };
+		6D6C95CD1DBB4A4F00DFBD54 /* MLInputChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C95CC1DBB4A4F00DFBD54 /* MLInputChatView.m */; };
+		6D6C95D31DBB519E00DFBD54 /* MLInformationHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D6C95D21DBB519E00DFBD54 /* MLInformationHeadView.m */; };
+		6D6C95D51DBB51BB00DFBD54 /* MLInformationHeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D6C95D41DBB51BB00DFBD54 /* MLInformationHeadView.xib */; };
 		6DAF86AB1DB8CDF600E075ED /* MLNewViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF86A91DB8CDF600E075ED /* MLNewViewCell.m */; };
 		6DAF86AC1DB8CDF600E075ED /* MLNewViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6DAF86AA1DB8CDF600E075ED /* MLNewViewCell.xib */; };
 		6DAF86AF1DB8E31300E075ED /* MLHeartFlyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DAF86AE1DB8E31300E075ED /* MLHeartFlyView.m */; };
@@ -345,6 +350,15 @@
 		6D4263481DAD0E4C00D42054 /* MLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLNavigationController.m; path = LiveApp/Main/Controllers/MLNavigationController.m; sourceTree = SOURCE_ROOT; };
 		6D42634A1DAD148200D42054 /* MLRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLRequestManager.h; path = LiveApp/Main/Tools/MLRequestManager.h; sourceTree = SOURCE_ROOT; };
 		6D42634B1DAD148200D42054 /* MLRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLRequestManager.m; path = LiveApp/Main/Tools/MLRequestManager.m; sourceTree = SOURCE_ROOT; };
+		6D6C95C51DBB3B1200DFBD54 /* CALayer+MLLoadingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CALayer+MLLoadingLayer.h"; path = "LiveApp/Main/Tools/CALayer+MLLoadingLayer.h"; sourceTree = SOURCE_ROOT; };
+		6D6C95C61DBB3B1200DFBD54 /* CALayer+MLLoadingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CALayer+MLLoadingLayer.m"; path = "LiveApp/Main/Tools/CALayer+MLLoadingLayer.m"; sourceTree = SOURCE_ROOT; };
+		6D6C95C81DBB3D8800DFBD54 /* MLShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShareView.h; sourceTree = "<group>"; };
+		6D6C95C91DBB3D8800DFBD54 /* MLShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShareView.m; sourceTree = "<group>"; };
+		6D6C95CB1DBB4A4F00DFBD54 /* MLInputChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLInputChatView.h; sourceTree = "<group>"; };
+		6D6C95CC1DBB4A4F00DFBD54 /* MLInputChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLInputChatView.m; sourceTree = "<group>"; };
+		6D6C95D11DBB519E00DFBD54 /* MLInformationHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLInformationHeadView.h; sourceTree = "<group>"; };
+		6D6C95D21DBB519E00DFBD54 /* MLInformationHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLInformationHeadView.m; sourceTree = "<group>"; };
+		6D6C95D41DBB51BB00DFBD54 /* MLInformationHeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLInformationHeadView.xib; sourceTree = "<group>"; };
 		6DAF86A81DB8CDF600E075ED /* MLNewViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MLNewViewCell.h; path = LiveApp/AllLive/View/MLNewViewCell.h; sourceTree = SOURCE_ROOT; };
 		6DAF86A91DB8CDF600E075ED /* MLNewViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MLNewViewCell.m; path = LiveApp/AllLive/View/MLNewViewCell.m; sourceTree = SOURCE_ROOT; };
 		6DAF86AA1DB8CDF600E075ED /* MLNewViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MLNewViewCell.xib; path = LiveApp/AllLive/View/MLNewViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -829,6 +843,8 @@
 				6DB0D84C1DB77D1200FFE072 /* UIImageView+MLExtensionLoadImage.m */,
 				6DAF86AD1DB8E31300E075ED /* MLHeartFlyView.h */,
 				6DAF86AE1DB8E31300E075ED /* MLHeartFlyView.m */,
+				6D6C95C51DBB3B1200DFBD54 /* CALayer+MLLoadingLayer.h */,
+				6D6C95C61DBB3B1200DFBD54 /* CALayer+MLLoadingLayer.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -958,6 +974,13 @@
 				6DB0D84F1DB78FBA00FFE072 /* MLPlayerView.m */,
 				6DCEDB6A1DB8640E0080B084 /* MLOperationView.h */,
 				6DCEDB6B1DB8640E0080B084 /* MLOperationView.m */,
+				6D6C95D11DBB519E00DFBD54 /* MLInformationHeadView.h */,
+				6D6C95D21DBB519E00DFBD54 /* MLInformationHeadView.m */,
+				6D6C95D41DBB51BB00DFBD54 /* MLInformationHeadView.xib */,
+				6D6C95C81DBB3D8800DFBD54 /* MLShareView.h */,
+				6D6C95C91DBB3D8800DFBD54 /* MLShareView.m */,
+				6D6C95CB1DBB4A4F00DFBD54 /* MLInputChatView.h */,
+				6D6C95CC1DBB4A4F00DFBD54 /* MLInputChatView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1201,6 +1224,7 @@
 				6D03C7541DB0F3E8007C882D /* swith.png in Resources */,
 				6D03C7871DB0F3E8007C882D /* diamond-18.png in Resources */,
 				6D03C79D1DB0F3E8007C882D /* diamond-38.png in Resources */,
+				6D6C95D51DBB51BB00DFBD54 /* MLInformationHeadView.xib in Resources */,
 				6D03C7891DB0F3E8007C882D /* diamond-2.png in Resources */,
 				6D03C7571DB0F3E8007C882D /* theInput.png in Resources */,
 				6D03C78E1DB0F3E8007C882D /* diamond-24.png in Resources */,
@@ -1347,17 +1371,21 @@
 				6DE041551DAE2AC5002661C1 /* MLLoginAndRedisterController.m in Sources */,
 				6DE0410D1DADEB52002661C1 /* MLLiveScrollView.m in Sources */,
 				6D4263461DACC9FC00D42054 /* MLLiveCellModel.m in Sources */,
+				6D6C95CD1DBB4A4F00DFBD54 /* MLInputChatView.m in Sources */,
 				6DAF86AB1DB8CDF600E075ED /* MLNewViewCell.m in Sources */,
 				6DE041141DAE1FAA002661C1 /* MLPlayerViewController.m in Sources */,
 				6DD0C8D91DAB438A00B06574 /* MLAppDelegate.m in Sources */,
 				6D42633B1DACA45400D42054 /* MLHotView.m in Sources */,
 				6D1A5CA51DAB8D2200D4ADC5 /* MLMainViewController.m in Sources */,
 				6DD0C8D61DAB438A00B06574 /* main.m in Sources */,
+				6D6C95CA1DBB3D8800DFBD54 /* MLShareView.m in Sources */,
 				6DAF86AF1DB8E31300E075ED /* MLHeartFlyView.m in Sources */,
 				6DD0C91D1DAB46A900B06574 /* MLProfileController.m in Sources */,
 				6DD0C91A1DAB468E00B06574 /* MLAllLiveController.m in Sources */,
 				6DE041521DAE27D0002661C1 /* MLUserModel.m in Sources */,
+				6D6C95D31DBB519E00DFBD54 /* MLInformationHeadView.m in Sources */,
 				6D4263491DAD0E4C00D42054 /* MLNavigationController.m in Sources */,
+				6D6C95C71DBB3B1200DFBD54 /* CALayer+MLLoadingLayer.m in Sources */,
 				6DB0D8501DB78FBA00FFE072 /* MLPlayerView.m in Sources */,
 				6DE041581DAE352E002661C1 /* MLPlayerScrollView.m in Sources */,
 				6DE0414F1DAE243F002661C1 /* MLLoginTools.m in Sources */,

@@ -15,7 +15,7 @@
     AFHTTPSessionManager *manager =[AFHTTPSessionManager manager];
     manager.responseSerializer =[AFHTTPResponseSerializer serializer];
     
-    if (header) {
+    if (header) {//如果有头部数据  则遍历传入数据
         [header enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
             [manager.requestSerializer  setValue:obj forHTTPHeaderField:key];
         }];
@@ -38,9 +38,6 @@
                 });
                 
             } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                //弹窗
-//                MBFadeAlertView *message =[[MBFadeAlertView alloc]init];
-//                [message showAlertWith:@"无可用网络"];
                 if (transmissionError) {
                 transmissionError((NSError *)error);//传出错误信息
                 }

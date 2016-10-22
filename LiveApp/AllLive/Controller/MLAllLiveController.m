@@ -17,7 +17,9 @@
 
 @end
 
-@implementation MLAllLiveController
+@implementation MLAllLiveController{
+    BOOL _isHidddenNCTC;
+}
 
 + (instancetype) shareManager{
     static MLAllLiveController *handle =nil;
@@ -53,8 +55,11 @@
     });
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    if (_isHidddenNCTC) {
+        self.navigationController.navigationBar.hidden = true;
+    }
 }
 
 - (void)setupNavigation{
@@ -78,22 +83,34 @@
 }
 
 - (void)appearNCAndTC{
+    if (_isHidddenNCTC == false) return;
+    _isHidddenNCTC = false;
 
-    [UIView animateWithDuration:HeaderViewanimateWithDuration animations:^{
+    [UIView animateWithDuration:MLHeaderViewanimateWithDuration animations:^{
         self.navigationController.navigationBar.frame = CGRectMake(0, 20,MLScreenWidth, 44);
         self.tabBarController.tabBar.frame =CGRectMake(0, MLScreenHeight-49, MLScreenWidth, 49);
-        self.scrollView.hotView.frame = CGRectMake(0, 64, MLScreenWidth, MLScreenHeight - 113);
+        self.scrollView.hotView.frame = CGRectMake(0, 64, MLScreenWidth, MLScreenHeight);
+        self.scrollView.nestView.frame = CGRectMake(MLScreenWidth, 64, MLScreenWidth, MLScreenHeight);
+    } completion:^(BOOL finished) {
+        self.navigationController.navigationBar.hidden = false;
     }];
 }
 
 - (void)hiddenNCAndTC{
-
-    [UIView animateWithDuration:HeaderViewanimateWithDuration animations:^{
+    if (_isHidddenNCTC == true) return;
+    _isHidddenNCTC = true;
+    [UIView animateWithDuration:MLHeaderViewanimateWithDuration animations:^{
         self.navigationController.navigationBar.frame =CGRectMake(0, -44,MLScreenWidth, 44);
         self.tabBarController.tabBar.frame = CGRectMake(0, MLScreenHeight, MLScreenWidth, 49);
         self.scrollView.hotView.frame = CGRectMake(0, 0, MLScreenWidth, MLScreenHeight);
+        self.scrollView.nestView.frame = CGRectMake(MLScreenWidth, 0, MLScreenWidth, MLScreenHeight);
     }];
 }
+
+- (BOOL)isNCAndTCHidden{
+    return _isHidddenNCTC;
+}
+
 
 - (void)presentToNextViewControllerWithIdentifying:(MLLiveScrollViewType)Identifying VCInfoArray:(NSMutableArray *)VCInfoArray clickNumber:(NSInteger)number{
     
@@ -115,11 +132,11 @@
 @implementation MLAllLiveController(Extension)
 
 -(void)headerViewhasClickHot{
-    [self.scrollView setContentOffset:CGPointZero animated:true];
+    [self.scrollView setContentOffset:CGPointMake(0, self.scrollView.contentOffset.y) animated:true];
 }
 
 - (void)headerViewhasClickNew{
-    [self.scrollView setContentOffset:CGPointMake(MLScreenWidth, 0) animated:true];
+    [self.scrollView setContentOffset:CGPointMake(MLScreenWidth, self.scrollView.contentOffset.y) animated:true];
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -127,6 +144,9 @@
     // 计算滑动的比例
     CGFloat point = 1 - (width - scrollView.contentOffset.x)/width;
     [((MLHeaderView *)self.navigationItem.titleView) scrollViewIsScroll:point];
+    if (scrollView.contentOffset.x == 0 || scrollView.contentOffset.x == MLScreenWidth) {
+        [self appearNCAndTC];
+    }
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{

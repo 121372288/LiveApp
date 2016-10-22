@@ -68,8 +68,6 @@ assert(self.liveArray.count > self.clickNumber);
     [self.rightImageView loadImageForURLString:rightModel.bigpic ? rightModel.bigpic : rightModel.photo];
 }
 
-
-
 -(UIImageView *)leftImageView{
     if (_leftImageView == nil) {
         _leftImageView = [self initializeImageWithFrame:CGRectMake(0, 0, MLScreenWidth, MLScreenHeight)];
@@ -125,14 +123,12 @@ assert(self.liveArray.count > self.clickNumber);
         self.centerImageView.image = self.leftImageView.image;
         self.contentOffset = CGPointMake(MLScreenWidth, 0);
         self.clickNumber = self.clickNumber==0 ? self.liveArray.count - 1 : self.clickNumber -1;
-//        [self.contenShowView removeFromSuperview];
         if([self.playDelegate respondsToSelector:@selector(scrollViewScrollToPage:)]) {
             [self.playDelegate scrollViewScrollToPage:self.clickNumber];
         }
     } else if (self.contentOffset.x == MLScreenWidth *2) {
         self.centerImageView.image = self.rightImageView.image;
         self.contentOffset = CGPointMake(MLScreenWidth, 0);
-//        [self.contenShowView removeFromSuperview];
         self.clickNumber = self.clickNumber==self.liveArray.count - 1 ? 0 : self.clickNumber + 1;
         if ([self.playDelegate respondsToSelector:@selector(scrollViewScrollToPage:)]) {
             [self.playDelegate scrollViewScrollToPage:self.clickNumber];

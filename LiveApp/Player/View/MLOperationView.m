@@ -8,9 +8,16 @@
 
 #import "MLOperationView.h"
 #import "MLHeartFlyView.h"
-@interface MLOperationView ()
+#import "CALayer+MLLoadingLayer.h"
+#import "MLShareView.h"
+#import "MLInputChatView.h"
+#import "MLInformationHeadView.h"
+#import "MLLiveCellModel.h"
+@interface MLOperationView ()<MLInputChatDelegate>
 /* 返回按钮 */
 @property (nonatomic, strong) UIButton *backButton;
+
+@property (nonatomic, strong) MLInformationHeadView *informationHeadView;
 /* 聊天按钮 */
 @property(nonatomic,strong)UIButton * chatBtn;
 /* 礼物按钮 */
@@ -18,7 +25,7 @@
 /* 分享按钮 */
 @property(nonatomic,strong)UIButton * shareBtn;
 /* 加载loading图片 */
-@property (nonatomic, strong) UIImageView *loadingView;
+@property (nonatomic, strong) UIView *loadingView;
 
 @property (nonatomic, assign) BOOL showView;
 
@@ -37,9 +44,23 @@
         [self addSubview:self.chatBtn];
         [self addSubview:self.giftBtn];
         [self addSubview:self.shareBtn];
+        [self addSubview:self.informationHeadView];
         self.splashTimer = [NSTimer scheduledTimerWithTimeInterval:1  target:self selector:@selector(rote) userInfo:nil repeats:YES];
     }
     return self;
+}
+
+- (void)setModel:(MLLiveCellModel *)model{
+    _model = model;
+    self.informationHeadView.liveID = model.useridx;
+}
+
+-(MLInformationHeadView *)informationHeadView{
+    if (_informationHeadView == nil) {
+        _informationHeadView = [[[NSBundle mainBundle] loadNibNamed:@"MLInformationHeadView" owner:nil options:nil] firstObject];
+        _informationHeadView.frame = CGRectMake(0, 0, MLScreenWidth, 125);
+    }
+    return _informationHeadView;
 }
 
 -(UIButton *)backButton{
@@ -56,33 +77,17 @@
     return _backButton;
 }
 
--(UIImageView *)loadingView{
+-(UIView *)loadingView{
     if (_loadingView == nil) {
         CGFloat imageWH = 67;
         CGFloat viewX = (MLScreenWidth - imageWH) * 0.5;
         CGFloat viewY = (MLScreenHeight - imageWH) * 0.5;
-        _loadingView = [[UIImageView alloc]initWithFrame:CGRectMake(viewX, viewY, imageWH, imageWH)];
-        _loadingView.image = [UIImage imageNamed:@"xuanzhuanLogo"];
-        [self.loadingView.layer addAnimation:[self rotation:2 degree:2 * M_PI direction:1.0 repeatCount:MAXFLOAT] forKey:@"rotationAnimation"];
+        _loadingView = [[UIView alloc]initWithFrame:CGRectMake(viewX, viewY, imageWH, imageWH)];
+        [CALayer loadingLayerToView:_loadingView];
     }
     return _loadingView;
 }
 
--(CABasicAnimation *)rotation:(float)dur degree:(float)degree direction:(int)direction repeatCount:(int)repeatCount
-{
-    CATransform3D rotationTransform = CATransform3DMakeRotation(degree, 0, 0, direction);
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-    animation.toValue = [NSValue valueWithCATransform3D:rotationTransform];
-    animation.duration  =  dur;
-    animation.autoreverses = NO;
-    animation.cumulative = NO;
-    animation.fillMode = kCAFillModeForwards;
-    animation.repeatCount = repeatCount;
-//    animation.delegate = self;
-    
-    return animation;
-    
-}
 
 -(UIButton *)chatBtn{
     if (_chatBtn == nil) {
@@ -139,7 +144,9 @@
 }
 
 - (void)chatBtnAction{
-    
+    MLInputChatView *inputView = [MLInputChatView sharedManage];
+    inputView.delegate = self;
+    [inputView showInView:self];
 }
 
 - (void)giftBtnAction{
@@ -148,23 +155,27 @@
 
 - (void)shareBtnAction{
     
+    [MLShareView showView:self.model];
+    
 }
 /* 控制视图模式  是否在加载 */
 - (void)operationDisappear{
-    self.loadingView.hidden = false;
+    self.loadingView.layer.hidden = false;
 
     self.chatBtn.hidden = true;
     self.giftBtn.hidden = true;
     self.shareBtn.hidden = true;
+    self.informationHeadView.hidden = true;
 }
 - (void)operationAppear{
-    self.loadingView.hidden = true;
+    self.loadingView.layer.hidden = true;
     
     self.chatBtn.hidden = false;
     self.giftBtn.hidden = false;
     self.shareBtn.hidden = false;
+    self.informationHeadView.hidden = false;
 }
-
+/* 爱心定时器刷爱心 */
 - (void)rote{
     MLHeartFlyView* heart = [[MLHeartFlyView alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
     [self addSubview:heart];
@@ -175,5 +186,15 @@
 -(void)dealloc{
     [self.splashTimer invalidate];
 }
+
+@end
+
+@implementation MLOperationView (Extension)
+
+- (void)inputChatViewCententUserName:(NSString *)userName ChatCentent:(NSString *)chatCentent cententType:(NSInteger)type{
+    
+}
+
+
 
 @end

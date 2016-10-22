@@ -20,12 +20,16 @@
 #define kWidth      self.view.frame.size.width
 #define kHeight     self.view.frame.size.height
 
-#define HeaderViewanimateWithDuration 0.3
+#define MLHeaderViewanimateWithDuration 0.3
 
 #define MLTintColor MLColor(216, 41, 116)
 
 //请求
 #define LIVELISTURL(p) [NSString stringWithFormat:@"http://live.9158.com/Room/GetHotLive_v2?page=%ld",(p)]
+
+#define LIVENEWLISTURL(p) [NSString stringWithFormat:@"http://live.9158.com/Room/GetNewRoomOnline?page=%ld",(p)]
+
+#define LIVE_DATA_REQUEST_URL(id) [NSString stringWithFormat:@"http://live.9158.com/UserInfo/GetUserInfo?curuseridx=61697605&touseridx=%ld",(id)]
 
 //#import <UIImageView+WebCache.h>
 #import "AFNetworking.h"
